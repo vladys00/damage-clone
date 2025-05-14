@@ -34,7 +34,10 @@
         "buy_buttons": {
           "type": "buy_buttons",
           "repeater": "{{ product.metafields.shopify[\"color-pattern\"].value }}",
-          "settings": {}
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
         },
         "share": {
           "type": "share",
@@ -54,7 +57,7 @@
       "settings": {
         "enable_sticky_info": true,
         "color_scheme": "scheme-1",
-        "media_size": "medium",
+        "media_size": "small",
         "constrain_to_viewport": true,
         "media_fit": "contain",
         "gallery_layout": "stacked",
