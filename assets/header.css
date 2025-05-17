@@ -108,6 +108,7 @@ textarea {
   transition: 0.4s transform;
   padding: 20px;
 
+
   .nav-active & {
     transform: none;
   }
@@ -116,12 +117,19 @@ textarea {
   }
   .cart-element {
     border-bottom: none;
+    padding: 15px;
+    a {
+      height: 20px;
+    }
   }
   a{
     display: block;
     
   }
   @media (min-width: 1000px){
+    font-size: 13px;
+    font-weight: 600;
+    gap:22px;
     padding: 0;
     margin:0;
     position: static;
@@ -131,6 +139,14 @@ textarea {
     width: 100%;
     overflow: visible;
     transform: none;
+    transition: none;
+    .cart-element {
+    border-bottom: none;
+    padding: 0;
+    a {
+      height: 20px;
+    }
+  }
     li{
       border-bottom: none;
     }
