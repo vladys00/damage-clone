@@ -8,6 +8,7 @@
   width: 90%;
   margin: 0 auto;
   box-sizing: border-box;
+  padding-top: 30px;
 }
 @media (min-wdth: 960px) {
   .width {
@@ -53,6 +54,15 @@ textarea {
     top: 50%;
     transform: translateY(-50%);
   }
+  @media (min-width: 1000px){
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    #hamburguer {
+      display: none;
+    }
+  }
+  
 }
 .header-flex > a {
   margin-left: auto;
@@ -69,11 +79,17 @@ textarea {
   opacity: 0;
   left: 100%;
   transition: left 0s 0.4s, opacity 0.4s;
+  @media (min-width: 1000px){
+    display: none;
+  }
   
   .nav-active & {
     left: 0;
     opacity: 1;
     transition: left 0s, opacity 0.4s;
+    @media (min-width: 1000px){
+    display: none;
+  }
   }
 }
 .header-nav {
@@ -104,6 +120,27 @@ textarea {
   a{
     display: block;
     
+  }
+  @media (min-width: 1000px){
+    padding: 0;
+    margin:0;
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    overflow: visible;
+    transform: none;
+    li{
+      border-bottom: none;
+    }
+    ul{
+      padding: 0;
+      margin:0;
+      li{
+        display: none;
+      }
+    }
   }
 }
 
