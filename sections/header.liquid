@@ -1,5 +1,7 @@
 {{ 'header.css' | asset_url | stylesheet_tag }}
-<div class="width" style="width:{{ settings.page-width }}px">
+<script src="{{ 'header.js' | asset_url }}" defer="defer"></script>
+
+<div class="width">
   <div class="header-flex">
       <a
     href="/"
@@ -11,17 +13,32 @@
       width="{{ section.settings.logo-width }}">
   </a>
 
-  <button class="hamburguer">{% render 'hamburguer-menu' %}</button>
+  <button id="hamburguer" class="hamburguer">{% render 'hamburguer-menu' %} </button>
 
   <ul class="header-nav">
     {% for link in section.settings.navigation.links %}
-    <li><a href="{{link.url}}">{{link.title}}</a></li>
+    <li><a href="{{link.url}}">{{link.title}}</a>
+    {% if link.links != blank %}
+      <ul class="header-sub">
+        {% for child in link.links %}
+          <li class="header-sub-itme">
+            <a class="header-sub-anchor" href="{{child.url}}">{{child.title}}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+    </li>
     {% endfor %}
-    <li><a  href="/cart">{% render 'shopping-cart' %}</a></li>
+    <li class="cart-element"><a  href="/cart">{% render 'shopping-cart' %}</a></li>
   </ul>
   </div>
 </div>
 
+<div class="header-nav-overlay"></div>
+
+<script>
+  
+</script>
 
 {% schema %}
   {

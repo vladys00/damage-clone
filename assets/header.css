@@ -5,7 +5,7 @@
 }
 
 .width {
-  width: calc(100% - 40px);
+  width: 90%;
   margin: 0 auto;
   box-sizing: border-box;
 }
@@ -46,4 +46,83 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.header-nav-overlay {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9;
+  opacity: 0;
+  left: 100%;
+  transition: left 0s 0.4s, opacity 0.4s;
+  
+  .nav-active & {
+    left: 0;
+    opacity: 1;
+    transition: left 0s, opacity 0.4s;
+  }
+}
+.header-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  overflow: auto;
+  width: 70%;
+  max-width: 300px;
+  background-color: white;
+  z-index: 10;
+  margin: 0;
+  padding-left: 0;
+  transform: translateX(-100%);
+  transition: 0.4s transform;
+
+  .nav-active & {
+    transform: none;
+  }
+  li{
+    border-bottom: 1px solid #dddddd;
+  }
+  .cart-element {
+    border-bottom: none;
+  }
+  a{
+    display: block;
+    padding: 20px;
+  }
+}
+
+/*
+this above --> .nav-active & {
+    transform: none;
+is the same as:
+.nav-active .header-nav{
+  transform: none;
+}
+So when .nav active gets added, the transform dissappears and
+ we show the hamburguer and the faded background
+} */
+
+.header-sub {
+  padding: 0 20px;
+  margin-top: 10px;
+  li{
+    border-bottom: none;
+  }
+}
+
+.header-sub-item {
+  & + & {
+    margin-top: 5px;
+  }
+}
+
+.header-sub-anchor {
+  color: #5e5e5e;
+  transition: 0.2s color;
+  &:hover {
+    color: black;
+  }
 }
