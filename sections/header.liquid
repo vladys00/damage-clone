@@ -1,6 +1,7 @@
 {{ 'header.css' | asset_url | stylesheet_tag }}
 <div class="width" style="width:{{ settings.page-width }}px">
-  <a
+  <div class="header-flex">
+      <a
     href="/"
     class="header-logo"
     style="max-width: {{ section.settings.logo_width }}px;">
@@ -9,7 +10,16 @@
       alt="{{ shop.name }}"
       width="{{ section.settings.logo-width }}">
   </a>
-  <h1>Header</h1>
+
+  <button class="hamburguer">{% render 'hamburguer-menu' %}</button>
+
+  <ul class="header-nav">
+    {% for link in section.settings.navigation.links %}
+    <li><a href="{{link.url}}">{{link.title}}</a></li>
+    {% endfor %}
+    <li><a  href="/cart">{% render 'shopping-cart' %}</a></li>
+  </ul>
+  </div>
 </div>
 
 
@@ -23,7 +33,8 @@
         "type": "image_picker",
         "id": "logo",
         "label": "logo"
-      }, {
+      },
+       {
         "type": "range",
         "id": "logo-width",
         "label": "Logo width",
@@ -31,6 +42,12 @@
         "min": 20,
         "max": 300,
         "step": 5
+      },
+      {
+        "type": "link_list",
+        "id": "navigation",
+        "label": "Navigation menu",
+        "default": "main-menu"
       }
     ]
   }
