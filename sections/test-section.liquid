@@ -1,10 +1,67 @@
-<h1>Hello world</h1>
-{% schema  %} 
-{
-    "name" : "test section",
-    "settings": [],
-    "presets": [{
-        "name" : "default test section"
+<div style="background-color: {{section.settings.background-color}}; padding: 3rem;">
+<h1 style="color: {{section.settings.color}} ">{{section.settings.text}}</h1>
+{%for block in section.blocks%}
+<a href="{{block.settings.url}}">{{block.settings.text}}</a>
+{% endfor %}
+</div>
+
+
+
+
+{% schema %}
+  {
+    "name": "test section",
+    "tag" : "header",
+    "class" : "custom-section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "text",
+        "label": "Text",
+        "default": "some text goes in here"
+      },
+      {
+        "type": "color",
+        "id": "color",
+        "label": "Text color",
+        "default": "#000000"
+      },
+       {
+        "type": "color",
+        "id": "background-color",
+        "label": "Background color",
+        "default": "#FFFFFF"
+      }
+    ],
+    "presets": [
+      {
+        "name": "default test section",
+        "settings": {
+            "text" : "default text"
+        }
+      },
+      {
+        "name": "red test section",
+        "settings": {
+            "text" : "red text"
+        }
+      }
+    ],
+    "blocks": [{
+        "name" : "social links",
+        "type" : "social",
+        "settings": [
+             {
+                "type": "text",
+                "id" :"text",
+                "label" :"Text"
+            },
+            {
+                "type": "url",
+                "id" :"url",
+                "label" :"URL"
+            }
+        ]
     }]
-}
+  }
 {% endschema %}
