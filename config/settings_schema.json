@@ -1451,5 +1451,19 @@
         "default": "scheme-1"
       }
     ]
+  },
+  {
+    "name": "Page settings",
+    "settings": [
+      {
+        "type": "range",
+        "id": "page-width",
+        "label": "Page width",
+        "default" : 900,
+        "min": 800,
+        "max": 1000,
+        "step": 50
+      }
+    ]
   }
 ]
