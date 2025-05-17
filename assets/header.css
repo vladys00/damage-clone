@@ -2,3 +2,14 @@
   transition: left 0s 0.4s, opacity 0.4s;
   transition: left 0s, opacity 0.4s ;
 }
+
+.width {
+  width: calc(100% - 40px);
+  margin: 0 auto;
+  
+}
+@media (min-wdth: 960px){
+  .width{
+    width: calc(100% - 80px);
+  }
+  }
