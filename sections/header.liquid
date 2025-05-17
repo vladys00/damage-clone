@@ -6,10 +6,13 @@
   <div class="header-flex">
     <button id="hamburguer" class="hamburguer">{% render 'hamburguer-menu' %}</button>
     <a href="/" class="header-logo">
-      <img
-        src="{{ section.settings.logo | image_url: width: section.settings.logo-width }}"
-        alt="{{ shop.name }}"
-        height="{{ section.settings.logo-width }}">
+     <img
+  src="{{ section.settings.logo | image_url: width: section.settings.logo_width }}"
+  alt="{{ shop.name }}"
+  height="{{ section.settings.logo_width }}"
+  width="{{ section.settings.logo_width }}"
+>
+
     </a>
     <ul class="header-nav">
       {% for link in section.settings.navigation.links %}
@@ -64,7 +67,7 @@
         "type": "range",
         "id": "logo-width",
         "label": "Logo width",
-        "default": 300,
+        "default": 50,
         "min": 20,
         "max": 300,
         "step": 5
