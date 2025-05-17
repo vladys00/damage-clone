@@ -14,9 +14,9 @@
     "header": {
       "type": "header",
       "settings": {
-        "padding": 35,
+        "padding": 46,
         "logo": "shopify://shop_images/damage-logo.png",
-        "logo_width": 120,
+        "logo_width": 140,
         "navigation": "main-menu"
       }
     }
