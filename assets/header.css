@@ -44,9 +44,21 @@ textarea {
 
 .header-flex {
   display: flex;
+  position: relative;
   align-items: center;
   justify-content: space-between;
+  #hamburguer {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
+.header-flex > a {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .header-nav-overlay {
   position: fixed;
   top: 0;
@@ -78,6 +90,7 @@ textarea {
   padding-left: 0;
   transform: translateX(-100%);
   transition: 0.4s transform;
+  padding: 20px;
 
   .nav-active & {
     transform: none;
@@ -90,8 +103,20 @@ textarea {
   }
   a{
     display: block;
-    padding: 20px;
+    
   }
+}
+
+.header-nav > li {
+  padding:10px;
+  a{
+    color: #888888;
+    transition: 0.2s color;
+    &:hover {
+      color: black;
+    }
+  }
+  
 }
 
 /*
@@ -122,6 +147,7 @@ So when .nav active gets added, the transform dissappears and
 .header-sub-anchor {
   color: #5e5e5e;
   transition: 0.2s color;
+  font-size: 15px;
   &:hover {
     color: black;
   }
