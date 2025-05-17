@@ -16,7 +16,7 @@
       "settings": {
         "padding": 35,
         "logo": "shopify://shop_images/damage-logo.png",
-        "logo_width": 100,
+        "logo_width": 120,
         "navigation": "main-menu"
       }
     }
