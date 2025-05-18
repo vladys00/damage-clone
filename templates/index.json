@@ -64,9 +64,33 @@
         "show_text_below": true,
         "accessibility_info": "Slideshow about our brand"
       }
+    },
+    "gallery_slider_jBBKAz": {
+      "type": "gallery-slider",
+      "blocks": {
+        "image_88FHBG": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/image2.png"
+          }
+        },
+        "image_DmC7bg": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/image4.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_88FHBG",
+        "image_DmC7bg"
+      ],
+      "name": "Gallery Slider",
+      "settings": {}
     }
   },
   "order": [
-    "slideshow_nH9nHe"
+    "slideshow_nH9nHe",
+    "gallery_slider_jBBKAz"
   ]
 }

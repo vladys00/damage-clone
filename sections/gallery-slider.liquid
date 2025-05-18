@@ -3,8 +3,9 @@
 {{- 'custom-gallery-slider.css' | asset_url | stylesheet_tag -}}
 <script src="{{ 'custom-gallery-slider.js' | asset_url }}" type="module" defer="defer"></script>
 
-<h1>this is the gallery slider</h1>
-<div class="carousel" >
+
+<div class="container">
+    <div class="carousel" >
   {% for block in section.blocks %}
     {% if block.settings.image %}
       <div class="carousel-cell">
@@ -12,6 +13,8 @@
       </div>
     {% endif %}
   {% endfor %}
+</div>
+
 </div>
 
 {% schema %}
