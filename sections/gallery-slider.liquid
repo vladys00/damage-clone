@@ -1,0 +1,56 @@
+{{- 'flickity.css' | asset_url | stylesheet_tag -}}
+{{- 'flickity.pkgd.min.js' | asset_url | script_tag -}}
+{{- 'custom-gallery-slider.css' | asset_url | stylesheet_tag -}}
+<script src="{{ 'custom-gallery-slider.js' | asset_url }}" type="module" defer="defer"></script>
+
+
+<div class="container">
+    <div class="carousel" >
+  {% for block in section.blocks %}
+    {% if block.settings.image %}
+      <div class="carousel-cell">
+        <img style="width: 100%;" src="{{ block.settings.image | image_url: width: 800 }}" alt="Slide image">
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>
+
+  
+
+</div>
+<div class="thumbnail-carousel">
+    {% for block in section.blocks %}
+      {% if block.settings.image %}
+        <div class="thumbnail-cell">
+          <img src="{{ block.settings.image | image_url: width: 200 }}" alt="Thumbnail">
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+
+{% schema %}
+{
+    "name": "Image carousel",
+    "settings": [],
+    "presets": [
+    {
+      "name": "Gallery Slider"
+    }
+  ],
+    "blocks": [
+        {
+            "type": "image",
+            "name": "image slide",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id":"image",
+                    "label": "Slide image"
+                }
+            ]
+        }
+    ]
+}
+{% endschema %} 

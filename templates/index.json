@@ -9,64 +9,31 @@
  */
 {
   "sections": {
-    "slideshow_nH9nHe": {
-      "type": "slideshow",
+    "gallery_slider_jBBKAz": {
+      "type": "gallery-slider",
       "blocks": {
-        "slide_R8HHKw": {
-          "type": "slide",
+        "image_88FHBG": {
+          "type": "image",
           "settings": {
-            "image": "shopify://shop_images/image1.png",
-            "image_overlay_opacity": 0,
-            "heading": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "",
-            "link": "",
-            "button_style_secondary": false,
-            "show_text_box": false,
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "text_alignment_mobile": "center",
-            "color_scheme": ""
+            "image": "shopify://shop_images/image2.png"
           }
         },
-        "slide_QegFAq": {
-          "type": "slide",
+        "image_DmC7bg": {
+          "type": "image",
           "settings": {
-            "image": "shopify://shop_images/image2.png",
-            "image_overlay_opacity": 0,
-            "heading": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "",
-            "link": "",
-            "button_style_secondary": false,
-            "show_text_box": false,
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "text_alignment_mobile": "center",
-            "color_scheme": ""
+            "image": "shopify://shop_images/image4.png"
           }
         }
       },
       "block_order": [
-        "slide_R8HHKw",
-        "slide_QegFAq"
+        "image_88FHBG",
+        "image_DmC7bg"
       ],
-      "name": "t:sections.slideshow.presets.name",
-      "settings": {
-        "layout": "full_bleed",
-        "slide_height": "medium",
-        "slider_visual": "counter",
-        "auto_rotate": false,
-        "change_slides_speed": 5,
-        "image_behavior": "none",
-        "show_text_below": true,
-        "accessibility_info": "Slideshow about our brand"
-      }
+      "name": "Gallery Slider",
+      "settings": {}
     }
   },
   "order": [
-    "slideshow_nH9nHe"
+    "gallery_slider_jBBKAz"
   ]
 }
