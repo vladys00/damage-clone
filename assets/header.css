@@ -131,7 +131,7 @@ textarea {
     font-weight: 600;
     gap:22px;
     padding: 0;
-    margin:0;
+    margin-bottom:20px;
     position: static;
     display: flex;
     align-items: center;
@@ -149,14 +149,34 @@ textarea {
   }
     li{
       border-bottom: none;
+      position: relative;
     }
-    ul{
-      padding: 0;
-      margin:0;
-      li{
-        display: none;
-      }
+    .header-sub {
+        padding: 5px 20px;
+        margin-top: 15px;
+
+        @media (min-width: 1000px) {
+          width: 120px;
+          position: absolute;
+          top:24px;
+          transform: translateX(-50%);
+          background-color: white;
+          box-shadow: -2px 3px 16px 0px rgba(0,0,0,0.53);
+          opacity: 0;
+          left: -9999px;
+          transition: left 0s 0.4s, opacity 0.4s;
+        }
+        a:hover + &,
+        &:hover {
+          @media (min-width: 1000px){
+            left:65px;
+            opacity: 1;
+            transition: left 0s, opacity 0.4s;
+            
+          }
+        }
     }
+    
   }
 }
 
