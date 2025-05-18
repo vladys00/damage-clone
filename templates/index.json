@@ -23,11 +23,18 @@
           "settings": {
             "image": "shopify://shop_images/image4.png"
           }
+        },
+        "image_ytt4DR": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/image3.png"
+          }
         }
       },
       "block_order": [
         "image_88FHBG",
-        "image_DmC7bg"
+        "image_DmC7bg",
+        "image_ytt4DR"
       ],
       "name": "Gallery Slider",
       "settings": {}
