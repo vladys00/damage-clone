@@ -1,6 +1,8 @@
 {{ 'footer.css' |  asset_url |  stylesheet_tag }}
 
-<footer >
+<footer  style="margin-top: {{ section.settings.margin-top }}px;
+margin-bottom: {{ section.settings.margin-bottom }}px;
+padding: {{ section.settings.padding }}px;">
   
     <div class="social-icons-block">
         <ul class="social-icons">
@@ -40,13 +42,14 @@
     
       <div class="policies-block">
         {%- if section.settings.show_policy -%}
-          <ul >
+          <ul>
             {%- for policy in shop.policies -%}
               {%- if policy != blank -%}
                 <li>
-                  <small class="copyright__content"
-                    ><a href="{{ policy.url }}">{{ policy.title | escape }}</a></small
-                  >
+                  <small class="copyright__content">
+                    <a href="{{ policy.url }}">{{ policy.title | escape }}</a>
+                    
+                  </small>
                 </li>
               {%- endif -%}
             {%- endfor -%}
@@ -77,6 +80,35 @@
       "default": true,
       "label": "t:sections.footer.settings.show_policy.label",
       "info": "t:sections.footer.settings.show_policy.info"
+    },
+    {
+      "type": "range",
+      "id": "margin-top",
+      "label": "Margin top",
+      "default": 15,
+      "min": 5,
+      "max":  50,
+      "step": 1
+      
+    },
+    {
+      "type": "range",
+      "id": "margin-bottom",
+      "label": "Margin bottom",
+      "default": 15,
+      "min": 5,
+      "max":  50,
+      "step": 1
+    },
+    {
+      "type": "range",
+      "id": "padding",
+      "label": "Padding",
+      "default": 5,
+      "min": 5,
+      "max":  50,
+      "step": 2.5
+      
     }
   
   ]
