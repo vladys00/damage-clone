@@ -1,43 +1,42 @@
-
+{{ 'footer.css' |  asset_url |  stylesheet_tag }}
 
 <footer >
   
-        <div>
-          <ul class="social-icons">
-  {% if settings.social_instagram_link %}
-    <li class="social-icon social-icon--instagram">
-      <a
-        href="{{ settings.social_instagram_link | escape }}"
-        aria-label="Instagram"
-        target="_blank" rel="noopener noreferrer"
-      >
-        <img
-          src="{{ 'icon-instagram.svg' | asset_url }}"
-          alt="Instagram icon"
-          width="24" height="24"
-        />
-      </a>
-    </li>
-  {% endif %}
+    <div class="social-icons-block">
+        <ul class="social-icons">
+        {% if settings.social_instagram_link %}
+          <li class="social-icon social-icon--instagram">
+            <a
+              href="{{ settings.social_instagram_link | escape }}"
+              aria-label="Instagram"
+              target="_blank" rel="noopener noreferrer"
+            >
+              <img
+                src="{{ 'icon-instagram.png' | asset_url }}"
+                alt="Instagram icon"
+                width="27" height="27"
+              />
+            </a>
+          </li>
+        {% endif %}
 
-  {% if settings.social_youtube_link %}
-    <li class="social-icon social-icon--youtube">
-      <a
-        href="{{ settings.social_youtube_link | escape }}"
-        aria-label="YouTube"
-        target="_blank" rel="noopener noreferrer"
-      >
-        <img
-          src="{{ 'icon-youtube.svg' | asset_url }}"
-          alt="YouTube icon"
-          width="24" height="24"
-        />
-      </a>
-    </li>
-  {% endif %}
-</ul>
-
-        </div>
+        {% if settings.social_youtube_link %}
+          <li class="social-icon social-icon--youtube">
+            <a
+              href="{{ settings.social_youtube_link | escape }}"
+              aria-label="YouTube"
+              target="_blank" rel="noopener noreferrer"
+            >
+              <img
+                src="{{ 'icon-youTube.png' | asset_url }}"
+                alt="YouTube icon"
+                width="27" height="27"
+              />
+            </a>
+          </li>
+        {% endif %}
+      </ul>
+      </div>
     
       <div class="policies-block">
         {%- if section.settings.show_policy -%}
