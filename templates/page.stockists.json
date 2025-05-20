@@ -1,8 +1,28 @@
-
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
       "type": "stockists-list",
+      "blocks": {
+        "country_tiygT7": {
+          "type": "country",
+          "settings": {
+            "country_name": "Spain",
+            "country_tag": "spain"
+          }
+        }
+      },
+      "block_order": [
+        "country_tiygT7"
+      ],
       "settings": {}
     }
   },
