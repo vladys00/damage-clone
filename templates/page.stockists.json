@@ -31,7 +31,7 @@
           "type": "store",
           "settings": {
             "store_name": "Sk8land",
-            "store_url": "",
+            "store_url": "https://sk8land.com",
             "country_tag": "spain"
           }
         },
