@@ -4,7 +4,8 @@
 {% assign country_blocks = section.blocks | where: "type", "country" %}
 {% assign store_blocks = section.blocks | where: "type", "store" %}
 
-<div class="dropdow-container">
+<div class="dropdow-container" style="margin-top:{{section.settings.margin-top}} px;
+ margin-bottom:{{ section.settings.margin-bottom }} px">
   <div class="dropdown-width">
     {% for country in country_blocks %}
       <div class="country-dropdown">
@@ -14,7 +15,7 @@
           </div>
           <h3>{{ country.settings.country_name }}</h3>
         </div>
-        <ul class="none">
+        <ul >
           {% for store in store_blocks %}
             {% if store.settings.country_tag == country.settings.country_tag %}
               <li>
@@ -35,7 +36,26 @@
 {% schema %}
   {
     "name": "Sockists",
-    "settings": [],
+    "settings": [
+        {
+            "type":"range",
+            "id":"margin-top",
+            "label": "Margin Top",
+            "default": 30,
+            "min": 0,
+            "max": 500,
+            "step": 5
+        },
+        {
+            "type":"range",
+            "id":"margin-bottom",
+            "label": "Margin Bottom",
+            "default": 30,
+            "min": 0,
+            "max": 500,
+            "step": 5
+        }
+    ],
     "blocks": [
       {
         "type": "country",
