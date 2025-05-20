@@ -1,0 +1,42 @@
+.dropdow-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .dropdown-width {
+    width: fit-content;
+    .country-dropdown {
+        .title-container{
+            display: flex;
+            align-items: center;
+            h3 {
+                margin: 0;
+                text-transform: uppercase;
+            }
+            .triangle-container {
+                transform: rotate(-90deg);
+            }
+                height: fit-content;
+                width: fit-content;
+            }
+        }
+      ul {
+        margin: 0;
+        padding: 0;
+        li {
+          a {
+            color: #9d9d9d;
+            transition: color 0.3s ease ;
+            &:hover {
+                color:black;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .none {
+    display: none;
+  }
+

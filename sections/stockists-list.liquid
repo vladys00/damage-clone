@@ -1,73 +1,82 @@
+{{ 'stockists.css' | asset_url | stylesheet_tag }}
+{{ 'stockists.js' |  asset_url | script_tag }}
 
 {% assign country_blocks = section.blocks | where: "type", "country" %}
 {% assign store_blocks = section.blocks | where: "type", "store" %}
 
-{% for country in country_blocks %}
-  <div class="country-dropdown">
-    <h3>{{ country.settings.country_name }}</h3>
-    <ul>
-      {% for store in store_blocks %}
-        {% if store.settings.country_tag == country.settings.country_tag %}
-          <li>
-            <a href="{{ store.settings.store_url }}">
-              {{ store.settings.store_name }}
-            </a>
-          </li>
-        {% endif %}
-      {% endfor %}
-    </ul>
+<div class="dropdow-container">
+  <div class="dropdown-width">
+    {% for country in country_blocks %}
+      <div class="country-dropdown">
+        <div class="title-container">
+          <div class="triangle-container">
+            {% render 'triangle' %}
+          </div>
+          <h3>{{ country.settings.country_name }}</h3>
+        </div>
+        <ul class="none">
+          {% for store in store_blocks %}
+            {% if store.settings.country_tag == country.settings.country_tag %}
+              <li>
+                <a href="{{ store.settings.store_url }}">
+                  {{ store.settings.store_name }}
+                </a>
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    {% endfor %}
   </div>
-{% endfor %}
+
+</div>
+
 
 {% schema %}
-{
-  "name": "Sockists",
-  "settings": [],
-  "blocks": [
-    {
-      "type": "country",
-      "name": "Country",
-      "settings": [
-        {
-          "type": "text",
-          "id": "country_name",
-          "label": "Country Name"
-        },
-        {
-          "type": "text",
-          "id": "country_tag",
-          "label": "Tag for Matching Stores (e.g. 'usa')"
-        }
-      ]
-    },
-    {
-      "type": "store",
-      "name": "Store",
-      "settings": [
-        {
-          "type": "text",
-          "id": "store_name",
-          "label": "Store Name"
-        },
-        {
-          "type": "url",
-          "id": "store_url",
-          "label": "Store Link"
-        },
-        {
-          "type": "text",
-          "id": "country_tag",
-          "label": "Country Tag (same as above)"
-        }
-      ]
-    }
-  ],
-  "presets":[
-    {
-    "name": "Countries with Stores",
-    "category": "Custom",
-    "blocks": []
+  {
+    "name": "Sockists",
+    "settings": [],
+    "blocks": [
+      {
+        "type": "country",
+        "name": "Country",
+        "settings": [
+          {
+            "type": "text",
+            "id": "country_name",
+            "label": "Country Name"
+          }, {
+            "type": "text",
+            "id": "country_tag",
+            "label": "Tag for Matching Stores (e.g. 'usa')"
+          }
+        ]
+      }, {
+        "type": "store",
+        "name": "Store",
+        "settings": [
+          {
+            "type": "text",
+            "id": "store_name",
+            "label": "Store Name"
+          }, {
+            "type": "url",
+            "id": "store_url",
+            "label": "Store Link"
+          }, {
+            "type": "text",
+            "id": "country_tag",
+            "label": "Country Tag (to assign this store the corresponding country)"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Countries with Stores",
+        "category": "Custom",
+        "blocks": []
+      }
+    ]
   }
-  ] 
-}
 {% endschema %}
