@@ -1,0 +1,50 @@
+<h1>here will be the stockists list</h1>
+
+{% schema %}
+{
+  "name": "Sockists",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "country",
+      "name": "Country",
+      "settings": [
+        {
+          "type": "text",
+          "id": "country_name",
+          "label": "Country Name"
+        },
+        {
+          "type": "text",
+          "id": "store_1_name",
+          "label": "Store 1 Name"
+        },
+        {
+          "type": "url",
+          "id": "store_1_url",
+          "label": "Store 1 URL"
+        },
+        {
+          "type": "text",
+          "id": "store_2_name",
+          "label": "Store 2 Name"
+        },
+        {
+          "type": "url",
+          "id": "store_2_url",
+          "label": "Store 2 URL"
+        }
+        // Add more store slots as needed
+      ]
+    }
+  ],
+  "max_blocks": 10,
+  "presets":[
+    {
+    "name": "Countries with Stores",
+    "category": "Custom",
+    "blocks": []
+  }
+  ] 
+}
+{% endschema %}
