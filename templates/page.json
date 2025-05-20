@@ -46,11 +46,27 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "video_jmExa9": {
+      "type": "video",
+      "name": "t:sections.video.presets.name",
+      "settings": {
+        "heading": "DAMAGE X CAPITOL",
+        "heading_size": "h1",
+        "enable_video_looping": false,
+        "video_url": "https://www.youtube.com/watch?v=OJdGB9Wb6lI&ab_channel=TransWorldSKATEboarding",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
     "video_hNgqC6",
-    "video_fpUieM"
+    "video_fpUieM",
+    "video_jmExa9"
   ]
 }
