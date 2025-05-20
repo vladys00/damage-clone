@@ -1,9 +1,8 @@
-console.log("laoded script")
+
 
 const button = document.getElementById('hamburguer')
 const overlay = document.querySelector('.header-nav-overlay')
 
-console.log("this is the button-->",button);
 
 button.addEventListener('click', () => {
   console.log('hamburguer clicked');

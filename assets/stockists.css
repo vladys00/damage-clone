@@ -1,0 +1,62 @@
+.dropdow-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .dropdown-width {
+    width: 210px;
+    .country-dropdown {
+      &:hover{
+        cursor: pointer;
+      }
+        .title-container{
+            display: flex;
+            align-items: center;
+            h3 {
+                margin: 0;
+                text-transform: uppercase;
+            }
+            .triangle-container {
+                transform: rotate(-90deg);
+                svg {
+                  transition: transform 0.3s ease;
+
+                }
+            }
+                height: fit-content;
+                width: fit-content;
+            }
+        }
+      ul {
+        display: none;
+        margin: 0;
+        padding: 0;
+        li {
+          a {
+            color: #9d9d9d;
+            transition: color 0.3s ease ;
+            &:hover {
+                color:black;
+            }
+          }
+        }
+      }
+    }
+  }
+
+ /* stockists.css */
+
+
+.country-dropdown.active ul {
+  display: block;
+}
+
+/* Triangle animation */
+
+
+.country-dropdown.active .triangle-container svg {
+  transform: rotate(90deg);
+}
+
+
+
