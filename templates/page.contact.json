@@ -13,7 +13,7 @@
       "type": "main-page",
       "disabled": true,
       "settings": {
-        "padding_top": 36,
+        "padding_top": 44,
         "padding_bottom": 36
       }
     },
@@ -37,7 +37,7 @@
     "form": {
       "type": "contact-form",
       "settings": {
-        "heading": "✉️ <a href=\"mailto:info@damagelimited.eu\">info@damagelimited.eu</a>",
+        "heading": "<a href=\"mailto:info@damagelimited.eu\">info@damagelimited.eu</a>",
         "heading_size": "h2",
         "color_scheme": "scheme-1",
         "padding_top": 36,
