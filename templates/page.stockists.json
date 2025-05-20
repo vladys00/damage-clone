@@ -18,10 +18,89 @@
             "country_name": "Spain",
             "country_tag": "spain"
           }
+        },
+        "store_xCBV9J": {
+          "type": "store",
+          "settings": {
+            "store_name": "Welcome Skateshop",
+            "store_url": "",
+            "country_tag": "spain"
+          }
+        },
+        "store_wxBRgM": {
+          "type": "store",
+          "settings": {
+            "store_name": "Sk8land",
+            "store_url": "",
+            "country_tag": "spain"
+          }
+        },
+        "store_jyfCVa": {
+          "type": "store",
+          "settings": {
+            "store_name": "Four Children",
+            "store_url": "https://fchskate.com/",
+            "country_tag": "spain"
+          }
+        },
+        "country_xMphM6": {
+          "type": "country",
+          "settings": {
+            "country_name": "USA",
+            "country_tag": "usa"
+          }
+        },
+        "store_kGAa9t": {
+          "type": "store",
+          "settings": {
+            "store_name": "NJ Skateshop",
+            "store_url": "",
+            "country_tag": "usa"
+          }
+        },
+        "store_HdHbD9": {
+          "type": "store",
+          "settings": {
+            "store_name": "Nocturnal",
+            "store_url": "https://www.nocturnalphilly.com/",
+            "country_tag": "usa"
+          }
+        },
+        "store_KiD8rJ": {
+          "type": "store",
+          "settings": {
+            "store_name": "Humidity",
+            "store_url": "",
+            "country_tag": "usa"
+          }
+        },
+        "country_DKQnQh": {
+          "type": "country",
+          "settings": {
+            "country_name": "JAPAN (DIST)",
+            "country_tag": "japan"
+          }
+        },
+        "store_GhYcDa": {
+          "type": "store",
+          "settings": {
+            "store_name": "Shelter Distribution",
+            "store_url": "https://www.shelterskatedistribution.com/",
+            "country_tag": "japan"
+          }
         }
       },
       "block_order": [
-        "country_tiygT7"
+        "country_tiygT7",
+        "store_xCBV9J",
+        "store_wxBRgM",
+        "store_jyfCVa",
+        "country_xMphM6",
+        "store_kGAa9t",
+        "store_HdHbD9",
+        "store_KiD8rJ",
+        "country_DKQnQh",
+        "store_GhYcDa"
       ],
       "settings": {}
     }
