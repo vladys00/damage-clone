@@ -31,10 +31,26 @@
         "padding_top": 56,
         "padding_bottom": 44
       }
+    },
+    "video_fpUieM": {
+      "type": "video",
+      "name": "t:sections.video.presets.name",
+      "settings": {
+        "heading": "EL PAPASITO",
+        "heading_size": "h1",
+        "enable_video_looping": false,
+        "video_url": "https://www.youtube.com/watch?v=T72FQDEA4iM&ab_channel=Damage",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
-    "video_hNgqC6"
+    "video_hNgqC6",
+    "video_fpUieM"
   ]
 }
