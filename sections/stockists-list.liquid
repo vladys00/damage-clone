@@ -4,7 +4,7 @@
 {% assign country_blocks = section.blocks | where: "type", "country" %}
 {% assign store_blocks = section.blocks | where: "type", "store" %}
 
-<div class="dropdow-container" style="margin-top:{{section.settings.margin-top}}px; margin-bottom:{{ section.settings.margin-bottom }}px">
+<div class="dropdown-container" style="margin-top:{{section.settings.margin-top}}px; margin-bottom:{{ section.settings.margin-bottom }}px">
   <div class="dropdown-width">
     {% for country in country_blocks %}
       <div class="country-dropdown">
