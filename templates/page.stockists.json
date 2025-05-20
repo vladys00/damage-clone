@@ -23,7 +23,7 @@
           "type": "store",
           "settings": {
             "store_name": "Welcome Skateshop",
-            "store_url": "",
+            "store_url": "https://welcomesk8.com",
             "country_tag": "spain"
           }
         },
