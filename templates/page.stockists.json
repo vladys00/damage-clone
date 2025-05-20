@@ -70,7 +70,7 @@
           "type": "store",
           "settings": {
             "store_name": "Humidity",
-            "store_url": "",
+            "store_url": "https://humiditynola.com/",
             "country_tag": "usa"
           }
         },
