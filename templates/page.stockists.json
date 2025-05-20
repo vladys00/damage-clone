@@ -54,7 +54,7 @@
           "type": "store",
           "settings": {
             "store_name": "NJ Skateshop",
-            "store_url": "",
+            "store_url": "https://njskateshop.com",
             "country_tag": "usa"
           }
         },
