@@ -118,10 +118,25 @@ textarea {
   .cart-element {
     border-bottom: none;
     padding: 15px;
+    position: relative;
+    .cart-count {
+     position: absolute;
+     padding: 1px 8px;
+     background-color: #4a4a4ac2;
+     border-radius: 50%;
+     top: 9px;
+     left: -11px;
+     color: white;
+     font-size: 10px;
+    }
     a {
-      height: 20px;
+      height: 20px; 
     }
   }
+
+
+
+
   a{
     display: block;
     
@@ -223,5 +238,32 @@ So when .nav active gets added, the transform dissappears and
   font-size: 15px;
   &:hover {
     color: black;
+  }
+}
+
+  .cart-element.laptop-empty,
+  .cart-element.laptop-full {
+  @media (max-width: 1000px){
+    display: none;
+  }
+}
+
+.cart-element.mobile-empty,
+.cart-element.mobile-full {
+  position: relative;
+  left: -17px;
+  margin: 0;
+  .cart-count {
+     position: absolute;
+     padding: 1px 8px;
+     background-color: #4a4a4ac2;
+     border-radius: 50%;
+     top: 9px;
+     left: -11px;
+     color: white;
+     font-size: 10px;
+    }
+  @media (min-width: 1000px){
+    display: none;
   }
 }

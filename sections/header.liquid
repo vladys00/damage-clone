@@ -6,12 +6,23 @@
   <div class="header-flex">
     <button id="hamburguer" class="hamburguer">{% render 'hamburguer-menu' %}</button>
     <a href="/" class="header-logo">
-     <img
-  src="{{ section.settings.logo | image_url: width: section.settings.logo_width  }}"
-  alt="{{ shop.name }}"
-  height="{{ section.settings.logo_width }}"
-  width="{{ section.settings.logo_width }}"
->
+      <img
+        src="{{ section.settings.logo | image_url: width: section.settings.logo_width  }}"
+        alt="{{ shop.name }}"
+        height="{{ section.settings.logo_width }}"
+        width="{{ section.settings.logo_width }}">
+        {%- if cart == empty -%}
+        <a href="/cart" class="cart-element mobile-empty">
+        <div >{% render 'shopping-cart' %}</div>
+      </a>
+      {%- else -%}
+      <a href="/cart" class="cart-element mobile-full">
+        <div >{% render 'shopping-cart' %}</div>
+        <div class="cart-count">
+          {{ cart.item_count }}
+        </div>
+      </a>
+      {% endif %}
 
     </a>
     <ul class="header-nav">
@@ -29,9 +40,19 @@
           {% endif %}
         </li>
       {% endfor %}
-      <li class="cart-element">
-        <a href="/cart">{% render 'shopping-cart' %}</a>
-      </li>
+      {%- if cart == empty -%}
+        <a href="/cart" class="cart-element laptop-empty">
+        <div >{% render 'shopping-cart' %}</div>
+      </a>
+      {%- else -%}
+      <a href="/cart" class="cart-element laptop-full">
+        <div >{% render 'shopping-cart' %}</div>
+        <div class="cart-count">
+          {{ cart.item_count }}
+        </div>
+      </a>
+      {% endif %}
+      
     </ul>
   </div>
 </div>
@@ -44,7 +65,7 @@
     px 0;
   }
 
-  img{
+  img {
     height: auto;
   }
 </style>
