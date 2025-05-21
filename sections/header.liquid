@@ -11,6 +11,18 @@
         alt="{{ shop.name }}"
         height="{{ section.settings.logo_width }}"
         width="{{ section.settings.logo_width }}">
+        {%- if cart == empty -%}
+        <a href="/cart" class="cart-element mobile-empty">
+        <div >{% render 'shopping-cart' %}</div>
+      </a>
+      {%- else -%}
+      <a href="/cart" class="cart-element mobile-full">
+        <div >{% render 'shopping-cart' %}</div>
+        <div class="cart-count">
+          {{ cart.item_count }}
+        </div>
+      </a>
+      {% endif %}
 
     </a>
     <ul class="header-nav">
@@ -29,16 +41,16 @@
         </li>
       {% endfor %}
       {%- if cart == empty -%}
-        <li class="cart-element">
-        <a href="/cart">{% render 'shopping-cart' %}</a>
-      </li>
+        <a href="/cart" class="cart-element laptop-empty">
+        <div >{% render 'shopping-cart' %}</div>
+      </a>
       {%- else -%}
-      <li class="cart-element">
-        <a href="/cart">{% render 'shopping-cart' %}</a>
+      <a href="/cart" class="cart-element laptop-full">
+        <div >{% render 'shopping-cart' %}</div>
         <div class="cart-count">
           {{ cart.item_count }}
         </div>
-      </li>
+      </a>
       {% endif %}
       
     </ul>
