@@ -58,10 +58,5 @@
   transform: rotate(90deg);
 }
 
-.cart-element.laptop-empty,
-.cart-element.laptop-full {
-  @media (min-width: 1000px){
-    background-color: red;
-  }
-}
+
 
